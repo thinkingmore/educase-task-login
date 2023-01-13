@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+       <form class="login-form">
+          <div class="logo-wrapper">
+             <img class="logo" src="./img/logo.png" alt="logo">
+             <div class="text-content">
+                <p>SOME RANDOM TEXT, SOME RANDOM TEXT,SOME RANDOM TEXT,SOME RANDOM TEXT</p>
+             </div>
+             <div class="toggle-button" id="toggleBtn">
+                <a class="btn active">Login</a>
+                <a class="btn">Signup</a>             
+             </div>
+             <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Email Address">
+                <input type="password" id="password" name="password" placeholder="Password">
+             </div>
+             <div class="input-button">
+                <input type="submit" value="LOGIN">
+             </div>
+             <a href="#" class="forget-password">Forget Password?</a>
+             <p class="social-login-text">or login with</p>
+             <div class="social-icon-wrapper">
+                <div class="social-icon">
+                   <a href="#">
+                        <img class="social-icon-img" src="./img/icons/google.png" alt="social-icon">
+                   </a>
+                </div>
+                <div class="social-icon">
+                    <a href="#">
+                        <img class="social-icon-img" src="./img/icons/facebook.png" alt="social-icon">
+                    </a>    
+                </div>
+                <div class="social-icon">
+                    <a href="#">
+                        <img class="social-icon-img" src="./img/icons/twitter.png" alt="social-icon">
+                    </a>             
+                </div>
+             </div>
+             <p class="no-account-text">Don’t have an account? <a href="#" class="link"> Create new now!</a></p>   
+             <p class="terms-text">By signing up, you are agree with our <a href="#" class="link-underline"> Terms & Conditions </a></p>   
+          </div>
+       </form> 
+    </div>
+    <script>
+        // Add active class to toggle button
+        var toggleBtn = document.getElementById("toggleBtn");
+        var btns = toggleBtn.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+          });
+        }
+    </script>
+</body>
+</html>
